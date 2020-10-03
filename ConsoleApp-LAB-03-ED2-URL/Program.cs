@@ -12,6 +12,7 @@ namespace ConsoleApp_LAB_03_ED2_URL
             Console.WriteLine("Ingrese el texto");
             string Text = Console.ReadLine();
             CompresorCrack.CrearRegistros(Text);
+            CompresorCrack.AsignarPrefijos();
             Console.WriteLine(CompresorCrack.Resultado_Obtenido());
             Console.ReadKey();
         }

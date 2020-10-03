@@ -243,5 +243,45 @@ namespace DataStructures
                 return cadena;
             }
 
+
+       
+
+        public void Add_Prefijo_Inorder(Delegate Asig_Prefijo)
+        {
+            try
+            {
+                if (raiz.Valor != null)
+                {
+                    if (raiz.Hijoizq != null)
+                    {
+                        Inorder(raiz.Hijoizq, Asig_Prefijo, "0");
+                    }
+
+                    if (raiz.Hijoder != null)
+                    {
+                        Inorder(raiz.Hijoder, Asig_Prefijo, "1");
+                    }
+                }
+            }
+            catch
+            {
+            }
         }
+        private void Inorder(Nodo<T> nodo_obt, Delegate Asig_Prefijo, string Prefijo_Binario)
+        {
+            if (nodo_obt.Hijoizq != null)
+            {
+                Inorder(nodo_obt.Hijoizq, Asig_Prefijo, Prefijo_Binario+"0");
+            }
+             nodo_obt.Valor=  (T)Asig_Prefijo.DynamicInvoke(nodo_obt.Valor, Prefijo_Binario);
+            if (nodo_obt.Hijoder != null)
+            {
+                Inorder(nodo_obt.Hijoder, Asig_Prefijo, Prefijo_Binario + "1");
+            }
+
+        }
+       
+
+
+    }
 }

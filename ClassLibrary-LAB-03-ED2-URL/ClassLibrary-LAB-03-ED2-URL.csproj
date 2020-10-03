@@ -5,4 +5,8 @@
     <RootNamespace>ClassLibrary_LAB_03_ED2_URL</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj" />
+  </ItemGroup>
+
 </Project>
