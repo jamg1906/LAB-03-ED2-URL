@@ -6,4 +6,8 @@
     <RootNamespace>ConsoleApp_LAB_03_ED2_URL</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary-LAB-03-ED2-URL\ClassLibrary-LAB-03-ED2-URL.csproj" />
+  </ItemGroup>
+
 </Project>
