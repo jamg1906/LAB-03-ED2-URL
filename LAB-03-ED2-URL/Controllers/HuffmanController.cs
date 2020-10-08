@@ -49,7 +49,19 @@ namespace LAB_03_ED2_URL.Controllers
         {
             try
             {
-                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + file.Name + ".huff");
+                string ogName = "";
+                int x = file.FileName.Length - 1;
+                int howMany = 0;
+                while (file.FileName[x] != '.')
+                {
+                    howMany++;
+                    x--;
+                }
+                for (int i = 0; i < file.FileName.Length-howMany-1; i++)
+                {
+                    ogName += file.FileName[i];
+                }
+                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + ogName + ".huff");
                 if (file != null)
                 {
                     using (var stream = new FileStream(filePath, FileMode.Create))
