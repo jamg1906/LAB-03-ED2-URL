@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj": {}
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
         "projectName": "ClassLibrary-LAB-03-ED2-URL",
-        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj"
+              "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj"
               }
             }
           }
@@ -60,14 +60,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
         "projectName": "ConsoleApp-LAB-03-ED2-URL",
-        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
+              "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
               }
             }
           }
@@ -116,14 +116,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj",
         "projectName": "DataStructures",
-        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\DataStructures\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\DataStructures\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",

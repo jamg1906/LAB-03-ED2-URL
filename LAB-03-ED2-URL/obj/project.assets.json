@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
       "projectName": "API-LAB-03-ED2-URL",
-      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
+      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Nueva carpeta (2)\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
