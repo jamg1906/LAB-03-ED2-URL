@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
       "projectName": "ConsoleApp-LAB-03-ED2-URL",
-      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
+      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -70,8 +70,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
+            "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
             }
           }
         }

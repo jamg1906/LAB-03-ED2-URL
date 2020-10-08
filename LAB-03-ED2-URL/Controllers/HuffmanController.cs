@@ -5,6 +5,12 @@ using System.Threading.Tasks;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Net.Http;
+using Microsoft.Net.Http.Headers;
+using System.Threading;
+using LAB_03_ED2_URL.Models;
+using System.Text.Json;
 
 namespace LAB_03_ED2_URL.Controllers
 {
@@ -27,7 +33,7 @@ namespace LAB_03_ED2_URL.Controllers
                     }
                 }
                 else { return StatusCode(500); }
-
+                //Aquí se debería mandar esa ruta o string al compresor, obtener la ruta del comprimido y regresarlo aquí.
                 return Ok("OK");
             }
             catch
@@ -43,7 +49,7 @@ namespace LAB_03_ED2_URL.Controllers
         {
             try
             {
-                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + file.FileName);
+                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + file.Name + ".huff");
                 if (file != null)
                 {
                     using (var stream = new FileStream(filePath, FileMode.Create))
@@ -52,6 +58,7 @@ namespace LAB_03_ED2_URL.Controllers
                     }
                 }
                 else { return StatusCode(500); }
+                //Aquí se debería mandar esa ruta o string al compresor, obtener la ruta del descomprimido y regresarlo aquí.
                 return Ok("OK");
             }
             catch
@@ -59,6 +66,13 @@ namespace LAB_03_ED2_URL.Controllers
                 return StatusCode(500);
             }
 
+        }
+
+        [HttpGet("compressions")]
+        
+        public ActionResult GetCompressionsJSON()
+        {
+            return Created("", Compression.GetAllCompressions());
         }
 
     }
