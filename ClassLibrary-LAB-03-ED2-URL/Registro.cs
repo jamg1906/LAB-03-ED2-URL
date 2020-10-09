@@ -13,6 +13,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
         public string prefijo;
         public Registro Hijo_Izq;
         public Registro Hijo_Der;
+        public bool IsNode;
 
         public static Comparison<Registro> Comparar_Prioridad = delegate (Registro Simb1, Registro Simb2)
         {
@@ -30,17 +31,9 @@ namespace ClassLibrary_LAB_03_ED2_URL
             return Simb1.simbolo.CompareTo(Simb2.simbolo);
         };
 
-        public static Func<Registro,String, Registro> Asignar_Prefijo = delegate (Registro Simb, string Prefijo_Binario)
-        {
-            if(Simb.simbolo != 0)
-            {
-            Simb.prefijo = Prefijo_Binario;
-            }
-            return Simb;
-        };
         public void Asig_Prefijo(string Prefijo_Binario)
         {
-            if (simbolo!= 0)
+            if (!IsNode)
             {
                 prefijo = Prefijo_Binario;
             }

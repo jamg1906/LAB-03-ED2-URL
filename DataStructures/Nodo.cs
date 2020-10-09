@@ -10,7 +10,5 @@ namespace DataStructures
         public Nodo<T> Hijoizq;
         public Nodo<T> Hijoder;
         public T Valor;
-      //  public int altura;
-       
     }
 }

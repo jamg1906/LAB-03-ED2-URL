@@ -10,7 +10,7 @@ namespace ConsoleApp_LAB_03_ED2_URL
         {
             Huffman CompresorCrack = new Huffman();
             Console.WriteLine("Hello");
-            CompresorCrack.WriteRegistry("Name", "Come Back...Be Here.mp3", 23.88, 90.3, 0.23);
+            //CompresorCrack.WriteRegistry("Name", "Come Back...Be Here.mp3", 23.88, 90.3, 0.23);
             //string paso = "";
             //while (!paso.Equals("si"))
             //{
@@ -48,21 +48,23 @@ namespace ConsoleApp_LAB_03_ED2_URL
             //    paso = Console.ReadLine();
             //}
 
-            //using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\cuento.txt", FileMode.OpenOrCreate);
+            //using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\easy test.txt", FileMode.OpenOrCreate);
             //using BinaryReader Lector = new BinaryReader(file);
             //int Cant_Byte_Read = 10000;
+            //int Aumentar_Max = 1;
             //byte[] Text = new byte[Cant_Byte_Read];
             //Text = Lector.ReadBytes(Cant_Byte_Read);
             //while (file.Position < file.Length)
             //{
             //    byte[] Aux = Lector.ReadBytes(Cant_Byte_Read);
             //    Array.Resize(ref Text, Text.Length + Aux.Length);
-            //    Aux.CopyTo(Text, Cant_Byte_Read);
+            //    Aux.CopyTo(Text, Cant_Byte_Read*Aumentar_Max);
+            //    Aumentar_Max++;
             //}
             //Lector.Close();
             //byte[] Impresor = CompresorCrack.Compresion(Text);
 
-            //using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\CuentoComprimido.txt", FileMode.OpenOrCreate);
+            //using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\Prueba3.txt", FileMode.OpenOrCreate);
             //using BinaryWriter Escritor = new BinaryWriter(StreFight);
             //Escritor.Write(Impresor);
             //Escritor.Close();
@@ -72,20 +74,22 @@ namespace ConsoleApp_LAB_03_ED2_URL
 
 
 
-            using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\CuentoComprimido.txt", FileMode.OpenOrCreate);
+            using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\Prueba3.txt", FileMode.OpenOrCreate);
             using BinaryReader Lector = new BinaryReader(file);
             int Cant_Byte_Read = 10000;
+            int Aumentar_Max = 1;
             byte[] Text = new byte[Cant_Byte_Read];
             Text = Lector.ReadBytes(Cant_Byte_Read);
             while (file.Position < file.Length)
             {
                 byte[] Aux = Lector.ReadBytes(Cant_Byte_Read);
                 Array.Resize(ref Text, Text.Length + Aux.Length);
-                Aux.CopyTo(Text, Cant_Byte_Read);
+                Aux.CopyTo(Text, Cant_Byte_Read * Aumentar_Max);
+                Aumentar_Max++;
             }
             Lector.Close();
             byte[] Impresor = CompresorCrack.Descompresion(Text);
-            using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\ResultadoDescomprimido.txt", FileMode.OpenOrCreate);
+            using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\FinalResul.txt", FileMode.OpenOrCreate);
             using BinaryWriter Escritor = new BinaryWriter(StreFight);
             Escritor.Write(Impresor);
             Escritor.Close();

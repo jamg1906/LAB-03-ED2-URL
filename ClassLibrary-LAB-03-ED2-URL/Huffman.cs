@@ -12,21 +12,23 @@ namespace ClassLibrary_LAB_03_ED2_URL
 {
     public class Huffman
     {
-        Heap<Registro> Cola;
-        Dictionary<byte, Registro> Tabla;
-        Dictionary<string, Registro> Tabla_Decompres;
-
-        int Tam_Original;
-        bool Compres;
+        private Heap<Registro> Cola;
+        private Dictionary<byte, Registro> Tabla;
+        private Dictionary<string, Registro> Tabla_Decompres;
+        private int Tam_Original;
+        private int Tam_Compress;
+        private bool Compres;
         public string Resultado_Obtenido()
         {
             string Resul="";
-             var Contenido=      Tabla.Values;
+            int total = 0;
+            var Contenido=      Tabla.Values;
             foreach (Registro Item in Contenido)
             {
-                     Resul += String.Format("{0,5}|{1,5}|{2,20}|{3,30}|{4,35}|" + Environment.NewLine, Convert.ToChar(Item.simbolo), Item.simbolo, Item.Cant_Aparicion, Convert.ToString(Item.probabilidad), Item.prefijo);
+                total += Item.Cant_Aparicion;
+                      Resul += String.Format("{0,5}|{1,5}|{2,20}|{3,30}|{4,35}|" + Environment.NewLine, Convert.ToChar(Item.simbolo), Item.simbolo, Item.Cant_Aparicion, Convert.ToString(Item.probabilidad), Item.prefijo);
             }
-            return Resul;
+            return Resul+ Environment.NewLine+"Total original=" +total.ToString();
         }
       
         
@@ -71,7 +73,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
             }
         }
 
-        public byte[] Send_MetaData()
+        private byte[] Send_MetaData()
         {
             int tam = 256;
             int Cant_BFrec = 1;
@@ -111,7 +113,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
             }
             return Resul;
         }
-        public void CrearRegistros(byte[] Texto)
+        private void CrearRegistros(byte[] Texto)
         {
 
             Cola = new Heap<Registro>();
@@ -121,6 +123,10 @@ namespace ClassLibrary_LAB_03_ED2_URL
             {
                 Nuevo = new Registro();
                 Nuevo.simbolo = Texto[i];
+                if(Nuevo.simbolo==0)
+                {
+                    string text = "fracaso rotundo";
+                }
                 if (Tabla.ContainsKey(Nuevo.simbolo))
                 {
                     Tabla[Nuevo.simbolo].Cant_Aparicion++;
@@ -139,7 +145,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
             }
         }
 
-        public void Crear_Arbol()
+        private void Crear_Arbol()
         {
             while (Cola.Cant_Nodos > 1)
             {
@@ -150,6 +156,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
                 Aux.probabilidad = One.probabilidad + Two.probabilidad;
                 Aux.Hijo_Der = One;
                 Aux.Hijo_Izq = Two;
+                Aux.IsNode = true;
                 Cola.Agregar(Aux, Registro.Determinar_Prioridad);
             }
         }
@@ -162,7 +169,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
                 {
                     if (raiz.Hijo_Izq != null)
                     {
-                        Inorder(raiz.Hijo_Izq, Registro.Asignar_Prefijo, "0");
+                        Inorder(raiz.Hijo_Izq, "0");
                     }
                         raiz.Asig_Prefijo("1");
                     if (!string.IsNullOrEmpty(raiz.prefijo))
@@ -175,7 +182,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
                     }
                     if (raiz.Hijo_Der != null)
                     {
-                        Inorder(raiz.Hijo_Der, Registro.Asignar_Prefijo, "1");
+                        Inorder(raiz.Hijo_Der,  "1");
                     }
                 }
             }
@@ -185,11 +192,11 @@ namespace ClassLibrary_LAB_03_ED2_URL
             }
         }
 
-        private void Inorder(Registro Registro_Nodo, Delegate Asig_Prefijo, string Prefijo_Binario)
+        private void Inorder(Registro Registro_Nodo, string Prefijo_Binario)
         {
             if (Registro_Nodo.Hijo_Izq != null)
             {
-                Inorder(Registro_Nodo.Hijo_Izq, Asig_Prefijo, Prefijo_Binario + "0");
+                Inorder(Registro_Nodo.Hijo_Izq,  Prefijo_Binario + "0");
             }
             Registro_Nodo.Asig_Prefijo(Prefijo_Binario);
             if(!string.IsNullOrEmpty(Registro_Nodo.prefijo))
@@ -203,7 +210,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
             }
             if (Registro_Nodo.Hijo_Der != null)
             {
-                Inorder(Registro_Nodo.Hijo_Der, Asig_Prefijo, Prefijo_Binario + "1");
+                Inorder(Registro_Nodo.Hijo_Der, Prefijo_Binario + "1");
             }
         }
 
@@ -340,6 +347,15 @@ namespace ClassLibrary_LAB_03_ED2_URL
             }
             return Resultado;
         }
+    
+        public double[] Datos_Compresion()
+        {
+            double razon_compresion = Tam_Compress / Tam_Original;
+            double Factor_Compresion = Tam_Original / Tam_Compress;
+            double Porcentaje_Reduccion = 100 * ((Tam_Compress - Tam_Original) / Tam_Original); 
+            return new double[3] {razon_compresion,Factor_Compresion,Porcentaje_Reduccion };
+        }
+    
     }
 
 }
