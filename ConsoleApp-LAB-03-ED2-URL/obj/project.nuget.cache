@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "SdDcIqqz3VwVCSC5xV0ukxQEr4pnxCLCvJcaFvx+g290wOcK4DtqK7/cNjAneBYnxzmAJZ9rjXhY/AT0FMO66g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
+=======
+  "dgSpecHash": "qGmeX9l4Jwuip8XfRyLoLxK7dNqhafYlENJcNFsMJooIMqnK8ATMs11A6mVJd9/p69nVKlGdK88fo6bCWTcZyQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
+>>>>>>> PruebaRead
   "expectedPackageFiles": [],
   "logs": []
 }

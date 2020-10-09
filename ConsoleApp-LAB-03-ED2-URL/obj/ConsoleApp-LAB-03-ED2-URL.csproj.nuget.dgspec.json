@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj": {}
   },
   "projects": {
@@ -12,23 +13,43 @@
         "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\obj\\",
+=======
+    "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
+        "projectName": "ClassLibrary-LAB-03-ED2-URL",
+        "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
+        "packagesPath": "C:\\Users\\Diego Veliz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\obj\\",
+>>>>>>> PruebaRead
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diego Veliz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj": {
                 "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj"
+=======
+              "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj": {
+                "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj"
+>>>>>>> PruebaRead
               }
             }
           }
@@ -56,10 +77,11 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -68,23 +90,40 @@
         "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\obj\\",
+=======
+    "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
+        "projectName": "ConsoleApp-LAB-03-ED2-URL",
+        "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
+        "packagesPath": "C:\\Users\\Diego Veliz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\obj\\",
+>>>>>>> PruebaRead
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diego Veliz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
                 "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
+=======
+              "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
+                "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
+>>>>>>> PruebaRead
               }
             }
           }
@@ -112,10 +151,11 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -124,17 +164,29 @@
         "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\DataStructures\\obj\\",
+=======
+    "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj",
+        "projectName": "DataStructures",
+        "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj",
+        "packagesPath": "C:\\Users\\Diego Veliz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\DataStructures\\obj\\",
+>>>>>>> PruebaRead
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diego Veliz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -164,7 +216,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

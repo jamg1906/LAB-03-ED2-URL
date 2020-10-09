@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "1HfXAKkEP9adBz7tCC5iEMHN6Qy0ipFSVeNKrPUQo3k+OqRA4Bh6HdIAsyOADK2KnirF/KGU2k+OFDAP9M+WhA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
+=======
+  "dgSpecHash": "wakbnUx0JK06obdZE2PVZ30L9/JD71vEaPhHLdxD0//8mN9iRXVs58XzHPszzvVUJm8fJ0UfX61HjV4kV2WdVw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
+>>>>>>> PruebaRead
   "expectedPackageFiles": [],
   "logs": []
 }

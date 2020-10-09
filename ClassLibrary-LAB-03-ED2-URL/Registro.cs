@@ -7,7 +7,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
 {
     public class Registro
     {
-        public string simbolo;
+        public byte simbolo;
         public int Cant_Aparicion;
         public double probabilidad;
         public string prefijo;
@@ -32,7 +32,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
 
         public static Func<Registro,String, Registro> Asignar_Prefijo = delegate (Registro Simb, string Prefijo_Binario)
         {
-            if(Simb.simbolo.Length==1)
+            if(Simb.simbolo != 0)
             {
             Simb.prefijo = Prefijo_Binario;
             }
@@ -40,7 +40,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
         };
         public void Asig_Prefijo(string Prefijo_Binario)
         {
-            if (simbolo.Length == 1)
+            if (simbolo!= 0)
             {
                 prefijo = Prefijo_Binario;
             }
