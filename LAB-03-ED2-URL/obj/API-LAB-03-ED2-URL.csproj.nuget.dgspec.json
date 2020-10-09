@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
-        "projectName": "API-LAB-03-ED2-URL",
-        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\obj\\",
-=======
     "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
         "packagesPath": "C:\\Users\\Diego Veliz\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\obj\\",
->>>>>>> PruebaRead
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -51,19 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
-      "projectName": "ConsoleApp-LAB-03-ED2-URL",
-      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
       "projectName": "ConsoleApp-LAB-03-ED2-URL",
       "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL.csproj",
       "packagesPath": "C:\\Users\\Diego Veliz\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\obj\\",
->>>>>>> PruebaRead
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -81,13 +73,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
-=======
             "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
               "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
->>>>>>> PruebaRead
             }
           }
         }
@@ -118,5 +105,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ConsoleApp-LAB-03-ED2-URL\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
