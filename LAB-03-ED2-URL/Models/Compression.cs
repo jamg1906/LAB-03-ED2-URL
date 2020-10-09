@@ -19,26 +19,32 @@ namespace LAB_03_ED2_URL.Models
 
         public static List<Compression> GetAllCompressions()
         {
-            List<Compression> All = new List<Compression>();
-
-            using (var reader = new StreamReader(Directory.GetCurrentDirectory() + "\\test.json"))
+            try
             {
-                string registry;
-                registry = reader.ReadToEnd();
-                JsonSerializerOptions rule = new JsonSerializerOptions { IgnoreNullValues = true };
-                All = JsonSerializer.Deserialize<List<Compression>>(registry, rule);
+                List<Compression> All = new List<Compression>();
+                using (var reader = new StreamReader(Directory.GetCurrentDirectory() + "\\test.json"))
+                {
+                    string registry;
+                    registry = reader.ReadToEnd();
+                    JsonSerializerOptions rule = new JsonSerializerOptions { IgnoreNullValues = true };
+                    All = JsonSerializer.Deserialize<List<Compression>>(registry, rule);
+                }
+                return All;
             }
-            return All;
+            catch { return null; }
         }
 
         public static void WriteRegistry(string OriginalName, string CompressedFilePath, double CompressionRatio, double CompressionFactor, double ReductionPercentage)
         {
-            //Aquí faltaría agregar la creación de json si no existe o está vacia porque si no va a morir
             string path = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\test.json");
+            if (!File.Exists(path))
+            {
+                using (FileStream creator = File.Create(path)){ };
+            }
             using (var reader = new StreamReader(path))
             {
                 JsonSerializerOptions rule = new JsonSerializerOptions { IgnoreNullValues = true };
-                List<Compression> All = JsonSerializer.Deserialize<List<Compression>>(reader.ReadToEnd(), rule);
+                List<Compression> All = new List<Compression>();
                 Compression tempCompression = new Compression
                 {
                     originalName = OriginalName,
@@ -47,8 +53,17 @@ namespace LAB_03_ED2_URL.Models
                     compressionFactor = CompressionFactor,
                     reductionPercentage = ReductionPercentage,
                 };
-                All.Add(tempCompression);
-                reader.Close();
+                try
+                {
+                    All = JsonSerializer.Deserialize<List<Compression>>(reader.ReadToEnd(), rule);
+                    All.Add(tempCompression);
+                    reader.Close();
+                }
+                catch
+                {
+                    All.Add(tempCompression);
+                    reader.Close();
+                }
                 using (var writer = new StreamWriter(path))
                 {
                     var AllRegistries = JsonSerializer.Serialize<List<Compression>>(All, rule);

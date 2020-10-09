@@ -35,7 +35,6 @@ namespace LAB_03_ED2_URL.Controllers
                 Compression.CompressFile(filePath, file.FileName, name);
                 FileStream Sender = new FileStream(Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", FileMode.OpenOrCreate);
                 return File(Sender, "text/plain", name + ".huff");
-
             }
             catch
             {
@@ -84,7 +83,12 @@ namespace LAB_03_ED2_URL.Controllers
         
         public ActionResult GetCompressionsJSON()
         {
-            return Created("", Compression.GetAllCompressions());
+            var Registries = Compression.GetAllCompressions();
+            if (Registries != null)
+            {
+                return Created("", Registries);
+            }
+            return StatusCode(500);
         }
 
     }
