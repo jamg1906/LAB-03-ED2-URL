@@ -90,12 +90,19 @@ namespace LAB_03_ED2_URL.Models
             }
             Lector.Close();
             byte[] Impresor = CompresorCrack.Compresion(Text);
-            using FileStream StreFight = new FileStream(Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", FileMode.OpenOrCreate);
+            string FinalFileName = Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff";
+            int count = 0;
+            while (File.Exists(FinalFileName))
+            {
+                count++;
+                FinalFileName = Directory.GetCurrentDirectory() + "\\Compressed\\" + name + count + ".huff";
+            }
+            using FileStream StreFight = new FileStream(FinalFileName, FileMode.OpenOrCreate);
             using BinaryWriter Escritor = new BinaryWriter(StreFight);
             Escritor.Write(Impresor);
             Escritor.Close();
             //var data = CompresorCrack.Datos_Compresion();
-            Compression.WriteRegistry(filename, Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", 0.23, 0.34, 45.7);
+            Compression.WriteRegistry(filename, FinalFileName, 0.23, 0.34, 45.7);
         }
 
     }
