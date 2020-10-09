@@ -78,6 +78,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
             int tam = 256;
             int Cant_BFrec = 1;
             int Aux = 0;
+            byte Estefue = 0;
             var Data = Tabla.Values;
             foreach (Registro Item in Data)
             {
@@ -85,6 +86,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
                     {
                         tam += 256;
                         Cant_BFrec++;
+                     Estefue = Item.simbolo;
                     }
             }
             byte[] Resul = new byte[2+(Cant_BFrec+1)*Data.Count];

@@ -48,7 +48,7 @@ namespace ConsoleApp_LAB_03_ED2_URL
             //    paso = Console.ReadLine();
             //}
 
-            //using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\easy test.txt", FileMode.OpenOrCreate);
+            //using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\MundoCiego.txt", FileMode.OpenOrCreate);
             //using BinaryReader Lector = new BinaryReader(file);
             //int Cant_Byte_Read = 10000;
             //int Aumentar_Max = 1;
@@ -58,13 +58,13 @@ namespace ConsoleApp_LAB_03_ED2_URL
             //{
             //    byte[] Aux = Lector.ReadBytes(Cant_Byte_Read);
             //    Array.Resize(ref Text, Text.Length + Aux.Length);
-            //    Aux.CopyTo(Text, Cant_Byte_Read*Aumentar_Max);
+            //    Aux.CopyTo(Text, Cant_Byte_Read * Aumentar_Max);
             //    Aumentar_Max++;
             //}
             //Lector.Close();
             //byte[] Impresor = CompresorCrack.Compresion(Text);
 
-            //using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\Prueba3.txt", FileMode.OpenOrCreate);
+            //using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\PruebaFinalWorld.txt", FileMode.OpenOrCreate);
             //using BinaryWriter Escritor = new BinaryWriter(StreFight);
             //Escritor.Write(Impresor);
             //Escritor.Close();
@@ -74,7 +74,7 @@ namespace ConsoleApp_LAB_03_ED2_URL
 
 
 
-            using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\Prueba3.txt", FileMode.OpenOrCreate);
+            using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\PruebaFinalWorld.txt", FileMode.OpenOrCreate);
             using BinaryReader Lector = new BinaryReader(file);
             int Cant_Byte_Read = 10000;
             int Aumentar_Max = 1;
@@ -89,7 +89,7 @@ namespace ConsoleApp_LAB_03_ED2_URL
             }
             Lector.Close();
             byte[] Impresor = CompresorCrack.Descompresion(Text);
-            using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\FinalResul.txt", FileMode.OpenOrCreate);
+            using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\FinalResulMundo.txt", FileMode.OpenOrCreate);
             using BinaryWriter Escritor = new BinaryWriter(StreFight);
             Escritor.Write(Impresor);
             Escritor.Close();
