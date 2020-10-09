@@ -27,25 +27,62 @@ namespace LAB_03_ED2_URL.Models
                 registry = reader.ReadToEnd();
                 JsonSerializerOptions rule = new JsonSerializerOptions { IgnoreNullValues = true };
                 All = JsonSerializer.Deserialize<List<Compression>>(registry, rule);
-                //Este era el lector del txt
-                /*do
-                {
-                    registry = reader.ReadLine();
-                    var attributes = registry.Split('|');
-                    try
-                    {
-                        Compression TempCompression = new Compression();
-                        TempCompression.originalName = attributes[0];
-                        TempCompression.compressedFilePath = attributes[1];
-                        TempCompression.compressionRatio = Convert.ToDouble(attributes[2]);
-                        TempCompression.compressionFactor = Convert.ToDouble(attributes[3]);
-                        TempCompression.reductionPercentage = Convert.ToDouble(attributes[4]);
-                        All.Add(TempCompression);
-                    }
-                    catch { return null; }
-                } while (!reader.EndOfStream);*/
             }
             return All;
         }
+
+        public static void WriteRegistry(string OriginalName, string CompressedFilePath, double CompressionRatio, double CompressionFactor, double ReductionPercentage)
+        {
+            //Aquí faltaría agregar la creación de json si no existe o está vacia porque si no va a morir
+            string path = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\test.json");
+            using (var reader = new StreamReader(path))
+            {
+                JsonSerializerOptions rule = new JsonSerializerOptions { IgnoreNullValues = true };
+                List<Compression> All = JsonSerializer.Deserialize<List<Compression>>(reader.ReadToEnd(), rule);
+                Compression tempCompression = new Compression
+                {
+                    originalName = OriginalName,
+                    compressedFilePath = CompressedFilePath,
+                    compressionRatio = CompressionRatio,
+                    compressionFactor = CompressionFactor,
+                    reductionPercentage = ReductionPercentage,
+                };
+                All.Add(tempCompression);
+                reader.Close();
+                using (var writer = new StreamWriter(path))
+                {
+                    var AllRegistries = JsonSerializer.Serialize<List<Compression>>(All, rule);
+                    writer.Write(AllRegistries);
+                }
+            }
+        }
+
+        public static void CompressFile(string filePath, string filename, string name)
+        {
+            ClassLibrary_LAB_03_ED2_URL.Huffman CompresorCrack = new ClassLibrary_LAB_03_ED2_URL.Huffman();
+            using FileStream fileC = new FileStream(filePath, FileMode.OpenOrCreate);
+            using BinaryReader Lector = new BinaryReader(fileC);
+            int Cant_Byte_Read = 10000;
+            int Aumentar_Max = 1;
+            byte[] Text = new byte[Cant_Byte_Read];
+            Text = Lector.ReadBytes(Cant_Byte_Read);
+            while (fileC.Position < fileC.Length)
+            {
+                byte[] Aux = Lector.ReadBytes(Cant_Byte_Read);
+                Array.Resize(ref Text, Text.Length + Aux.Length);
+                Aux.CopyTo(Text, Cant_Byte_Read);
+                Aumentar_Max++;
+            }
+            Lector.Close();
+            byte[] Impresor = CompresorCrack.Compresion(Text);
+            using FileStream StreFight = new FileStream(Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", FileMode.OpenOrCreate);
+            using BinaryWriter Escritor = new BinaryWriter(StreFight);
+            Escritor.Write(Impresor);
+            Escritor.Close();
+            //var data = CompresorCrack.Datos_Compresion();
+            Compression.WriteRegistry(filename, Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", 0.23, 0.34, 45.7);
+        }
+
     }
+
 }
