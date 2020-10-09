@@ -10,6 +10,7 @@ namespace ConsoleApp_LAB_03_ED2_URL
         {
             Huffman CompresorCrack = new Huffman();
             Console.WriteLine("Hello");
+            CompresorCrack.WriteRegistry("Name", "Come Back...Be Here.mp3", 23.88, 90.3, 0.23);
             //string paso = "";
             //while (!paso.Equals("si"))
             //{
@@ -67,7 +68,7 @@ namespace ConsoleApp_LAB_03_ED2_URL
             //Escritor.Close();
 
             //Console.WriteLine(CompresorCrack.Resultado_Obtenido());
-            
+
 
 
 

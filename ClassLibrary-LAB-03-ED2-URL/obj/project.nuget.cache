@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wakbnUx0JK06obdZE2PVZ30L9/JD71vEaPhHLdxD0//8mN9iRXVs58XzHPszzvVUJm8fJ0UfX61HjV4kV2WdVw==",
+  "dgSpecHash": "vp/o+Mek+By5N1XulvSWG+XkngeVLIECMy4ti/BaP9jQaKV2kYK6k37c46xUiS4jeJut0kbHo6H5PIyTvF87jQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\Diego Veliz\\Desktop\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

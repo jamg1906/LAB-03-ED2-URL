@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.IO;
 using System.Text;
 using DataStructures;
+using LAB_03_ED2_URL.Models;
+using System.Text.Json;
 
 namespace ClassLibrary_LAB_03_ED2_URL
 {
@@ -43,7 +46,31 @@ namespace ClassLibrary_LAB_03_ED2_URL
             Result.CopyTo(Meta_Data, Tam_Data);
             return Meta_Data;
         }
-        
+
+        public void WriteRegistry(string OriginalName, string CompressedFilePath, double CompressionRatio, double CompressionFactor, double ReductionPercentage)
+        {
+            string path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + "\\LAB-03-ED2-URL\\test.json");
+            using (var reader = new StreamReader(path))
+            {
+                List<Compression> All = new List<Compression>();
+                JsonSerializerOptions rule = new JsonSerializerOptions { IgnoreNullValues = true };
+                All = JsonSerializer.Deserialize<List<Compression>>(reader.ReadToEnd(), rule);
+                Compression NewRegistry = new Compression();
+                NewRegistry.originalName = OriginalName;
+                NewRegistry.compressedFilePath = CompressedFilePath;
+                NewRegistry.compressionRatio = CompressionRatio;
+                NewRegistry.compressionFactor = CompressionRatio;
+                NewRegistry.reductionPercentage = ReductionPercentage;
+                All.Add(NewRegistry);
+                reader.Close();
+                using (var writer = new StreamWriter(path))
+                {
+                    var AllRegistries = JsonSerializer.Serialize<List<Compression>>(All, rule);
+                    writer.Write(AllRegistries);
+                }
+            }
+        }
+
 
         public byte[] Send_MetaData()
         {
