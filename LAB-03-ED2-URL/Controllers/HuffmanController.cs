@@ -25,7 +25,7 @@ namespace LAB_03_ED2_URL.Controllers
             {
                 ClassLibrary_LAB_03_ED2_URL.Huffman CompresorCrack = new ClassLibrary_LAB_03_ED2_URL.Huffman();
                 string CompressedName = name;
-                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + file.FileName);
+                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\NonCompressed\\" + file.FileName);
                 if (file != null)
                 {
                     using (var stream = new FileStream(filePath, FileMode.Create))
@@ -34,8 +34,28 @@ namespace LAB_03_ED2_URL.Controllers
                     }
                 }
                 else { return StatusCode(500); }
-                //Aquí se debería mandar esa ruta o string al compresor, obtener la ruta del comprimido y regresarlo aquí.
-                return Ok("OK");
+
+                using FileStream fileC = new FileStream(filePath, FileMode.OpenOrCreate);
+                using BinaryReader Lector = new BinaryReader(fileC);
+                int Cant_Byte_Read = 10000;
+                byte[] Text = new byte[Cant_Byte_Read];
+                Text = Lector.ReadBytes(Cant_Byte_Read);
+                while (fileC.Position < fileC.Length)
+                {
+                    byte[] Aux = Lector.ReadBytes(Cant_Byte_Read);
+                    Array.Resize(ref Text, Text.Length + Aux.Length);
+                    Aux.CopyTo(Text, Cant_Byte_Read);
+                }
+                Lector.Close();
+                byte[] Impresor = CompresorCrack.Compresion(Text);
+
+                using FileStream StreFight = new FileStream(Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", FileMode.OpenOrCreate);
+                using BinaryWriter Escritor = new BinaryWriter(StreFight);
+                Escritor.Write(Impresor);
+                Escritor.Close();
+                FileStream Sender = new FileStream(Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", FileMode.OpenOrCreate);
+                return File(Sender, "text/plain", name + ".huff");
+
             }
             catch
             {
