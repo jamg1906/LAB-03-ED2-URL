@@ -2,24 +2,10 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "API-LAB-03-ED2-URL/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/API-LAB-03-ED2-URL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/API-LAB-03-ED2-URL.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "ClassLibrary-LAB-03-ED2-URL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "API-LAB-03-ED2-URL": "1.0.0",
           "DataStructures": "1.0.0"
         },
         "compile": {
@@ -45,11 +31,6 @@
     }
   },
   "libraries": {
-    "API-LAB-03-ED2-URL/1.0.0": {
-      "type": "project",
-      "path": "../LAB-03-ED2-URL/API-LAB-03-ED2-URL.csproj",
-      "msbuildProject": "../LAB-03-ED2-URL/API-LAB-03-ED2-URL.csproj"
-    },
     "ClassLibrary-LAB-03-ED2-URL/1.0.0": {
       "type": "project",
       "path": "../ClassLibrary-LAB-03-ED2-URL/ClassLibrary-LAB-03-ED2-URL.csproj",

@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "ClassLibrary-LAB-03-ED2-URL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "DataStructures": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ClassLibrary-LAB-03-ED2-URL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary-LAB-03-ED2-URL.dll": {}
+        }
+      },
+      "DataStructures/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/DataStructures.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataStructures.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ClassLibrary-LAB-03-ED2-URL/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary-LAB-03-ED2-URL/ClassLibrary-LAB-03-ED2-URL.csproj",
+      "msbuildProject": "../ClassLibrary-LAB-03-ED2-URL/ClassLibrary-LAB-03-ED2-URL.csproj"
+    },
+    "DataStructures/1.0.0": {
+      "type": "project",
+      "path": "../DataStructures/DataStructures.csproj",
+      "msbuildProject": "../DataStructures/DataStructures.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "ClassLibrary-LAB-03-ED2-URL >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Usuario\\.nuget\\packages\\": {}
@@ -32,7 +69,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

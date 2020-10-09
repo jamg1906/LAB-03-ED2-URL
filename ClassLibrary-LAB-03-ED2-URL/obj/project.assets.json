@@ -2,19 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "API-LAB-03-ED2-URL/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/API-LAB-03-ED2-URL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/API-LAB-03-ED2-URL.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "DataStructures/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -28,11 +15,6 @@
     }
   },
   "libraries": {
-    "API-LAB-03-ED2-URL/1.0.0": {
-      "type": "project",
-      "path": "../LAB-03-ED2-URL/API-LAB-03-ED2-URL.csproj",
-      "msbuildProject": "../LAB-03-ED2-URL/API-LAB-03-ED2-URL.csproj"
-    },
     "DataStructures/1.0.0": {
       "type": "project",
       "path": "../DataStructures/DataStructures.csproj",
@@ -41,7 +23,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "API-LAB-03-ED2-URL >= 1.0.0",
       "DataStructures >= 1.0.0"
     ]
   },
@@ -73,9 +54,6 @@
           "projectReferences": {
             "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj": {
               "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\DataStructures\\DataStructures.csproj"
-            },
-            "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj"
             }
           }
         }
@@ -99,9 +77,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

@@ -23,6 +23,7 @@ namespace LAB_03_ED2_URL.Controllers
         {
             try
             {
+                ClassLibrary_LAB_03_ED2_URL.Huffman CompresorCrack = new ClassLibrary_LAB_03_ED2_URL.Huffman();
                 string CompressedName = name;
                 var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + file.FileName);
                 if (file != null)
@@ -40,7 +41,6 @@ namespace LAB_03_ED2_URL.Controllers
             {
                 return StatusCode(500);
             }
-
         }
 
         [HttpPost("decompress")]
