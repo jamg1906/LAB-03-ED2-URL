@@ -104,7 +104,7 @@ namespace LAB_03_ED2_URL.Models
             string FinalFileName = Directory.GetCurrentDirectory() + "\\Decompressed\\" + Name_Original;
             var extension = FinalFileName.Split('.');
             string ext = extension[extension.Length - 1];
-            string name = Name_Original.Substring(0, Name_Original.Length - 4);
+            string name = Name_Original.Substring(0, Name_Original.Length - ext.Length-1);
             int count = 0;
             while (File.Exists(FinalFileName))
             {
@@ -115,6 +115,7 @@ namespace LAB_03_ED2_URL.Models
             using BinaryWriter Escritor = new BinaryWriter(StreFight);
             Escritor.Write(Impresor);
             Escritor.Close();
+            File.Delete(filePath);
             return Name_Original;
         }
 
@@ -158,6 +159,7 @@ namespace LAB_03_ED2_URL.Models
             Escritor.Close();
             double[] data = CompresorCrack.Datos_Compresion();
             Compression.WriteRegistry(filename, Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", data[0], data[1], data[2]);
+            File.Delete(filePath);
         }
     }
 
