@@ -122,7 +122,7 @@ namespace LAB_03_ED2_URL.Models
             {
                 byte[] Aux = Lector.ReadBytes(Cant_Byte_Read);
                 Array.Resize(ref Text, Text.Length + Aux.Length);
-                Aux.CopyTo(Text, Cant_Byte_Read);
+                Aux.CopyTo(Text, Cant_Byte_Read*Aumentar_Max);
                 Aumentar_Max++;
             }
             Lector.Close();
