@@ -10,7 +10,7 @@ using System.Text.Json;
 
 namespace ClassLibrary_LAB_03_ED2_URL
 {
-    public class Huffman
+    public class Huffman : Compressor 
     {
         private Heap<Registro> Cola;
         private Dictionary<byte, Registro> Tabla;

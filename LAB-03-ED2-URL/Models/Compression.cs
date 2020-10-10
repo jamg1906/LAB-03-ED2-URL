@@ -90,8 +90,6 @@ namespace LAB_03_ED2_URL.Models
             }
             Lector.Close();
             byte[] Impresor = CompresorCrack.Compresion(Text);
-<<<<<<< HEAD
-         
             byte[] Result = new byte[filename.Length+1];
             Result[0] = Convert.ToByte(filename.Length);
             for (int i = 1; i <= filename.Length; i++)
@@ -100,9 +98,6 @@ namespace LAB_03_ED2_URL.Models
             }
             Array.Resize(ref Result, filePath.Length + Impresor.Length);
             Impresor.CopyTo(Result, filePath.Length);
-
-            using FileStream StreFight = new FileStream(Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", FileMode.OpenOrCreate);
-=======
             string FinalFileName = Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff";
             int count = 0;
             while (File.Exists(FinalFileName))
@@ -111,12 +106,9 @@ namespace LAB_03_ED2_URL.Models
                 FinalFileName = Directory.GetCurrentDirectory() + "\\Compressed\\" + name + count + ".huff";
             }
             using FileStream StreFight = new FileStream(FinalFileName, FileMode.OpenOrCreate);
->>>>>>> 57d3363a199d78c52432b1cc8db33faf3372d046
             using BinaryWriter Escritor = new BinaryWriter(StreFight);
             Escritor.Write(Result);
             Escritor.Close();
-<<<<<<< HEAD
-
             double[] data = CompresorCrack.Datos_Compresion();
             Compression.WriteRegistry(filename, Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", data[0], data[1], data[2]);
         }
@@ -133,13 +125,7 @@ namespace LAB_03_ED2_URL.Models
             byte[] Data_retorna = new byte[TextoComprimido.Length - (cant_CName+1)];
             Array.Copy(TextoComprimido, (cant_CName + 1), Data_retorna, 0, Data_retorna.Length);
             //Aqui debe ir la parte de descompresion. 
-=======
-            //var data = CompresorCrack.Datos_Compresion();
-            Compression.WriteRegistry(filename, FinalFileName, 0.23, 0.34, 45.7);
->>>>>>> 57d3363a199d78c52432b1cc8db33faf3372d046
         }
-
-
     }
 
 }
