@@ -72,7 +72,7 @@ namespace LAB_03_ED2_URL.Models
             }
         }
 
-        public static void DecompressFile(string filePath, string filename)
+        public static string DecompressFile(string filePath)
         {
             ClassLibrary_LAB_03_ED2_URL.Huffman CompresorCrack = new ClassLibrary_LAB_03_ED2_URL.Huffman();
             using FileStream file = new FileStream(filePath, FileMode.OpenOrCreate);
@@ -89,11 +89,23 @@ namespace LAB_03_ED2_URL.Models
                 Aumentar_Max++;
             }
             Lector.Close();
-            byte[] Impresor = CompresorCrack.Descompresion(Text);
-            using FileStream StreFight = new FileStream(Directory.GetCurrentDirectory() + "\\Decompressed\\" + filename, FileMode.OpenOrCreate);
+
+            byte[] TextoComprimido = Text;
+            int cant_CName = TextoComprimido[0];
+            string Name_Original = "";
+            for (int i = 1; i <= cant_CName; i++)
+            {
+                Name_Original += Convert.ToChar(TextoComprimido[i]);
+            }
+            byte[] Data_retorna = new byte[TextoComprimido.Length - (cant_CName + 1)];
+            Array.Copy(TextoComprimido, (cant_CName + 1), Data_retorna, 0, Data_retorna.Length);
+
+            byte[] Impresor = CompresorCrack.Descompresion(Data_retorna);
+            using FileStream StreFight = new FileStream(Directory.GetCurrentDirectory() + "\\Decompressed\\" + Name_Original, FileMode.OpenOrCreate);
             using BinaryWriter Escritor = new BinaryWriter(StreFight);
             Escritor.Write(Impresor);
             Escritor.Close();
+            return Name_Original;
         }
 
 
