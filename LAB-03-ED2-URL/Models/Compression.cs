@@ -133,8 +133,8 @@ namespace LAB_03_ED2_URL.Models
             {
                 Result[i] = Convert.ToByte(Convert.ToChar(filename[i-1]));
             }
-            Array.Resize(ref Result, filePath.Length + Impresor.Length);
-            Impresor.CopyTo(Result, filePath.Length);
+            Array.Resize(ref Result, filename.Length+1 + Impresor.Length);
+            Impresor.CopyTo(Result, filename.Length+1);
             string FinalFileName = Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff";
             int count = 0;
             while (File.Exists(FinalFileName))
@@ -148,20 +148,6 @@ namespace LAB_03_ED2_URL.Models
             Escritor.Close();
             double[] data = CompresorCrack.Datos_Compresion();
             Compression.WriteRegistry(filename, Directory.GetCurrentDirectory() + "\\Compressed\\" + name + ".huff", data[0], data[1], data[2]);
-        }
-
-        public void Obtener_OriginalName()
-        {
-            byte[] TextoComprimido = new byte[32];
-            int cant_CName = TextoComprimido[0];
-            string Name_Original = "";
-            for(int i=1; i<= cant_CName;i++)
-            {
-                Name_Original += Convert.ToChar(TextoComprimido[i]);
-            }
-            byte[] Data_retorna = new byte[TextoComprimido.Length - (cant_CName+1)];
-            Array.Copy(TextoComprimido, (cant_CName + 1), Data_retorna, 0, Data_retorna.Length);
-            //Aqui debe ir la parte de descompresion. 
         }
     }
 

@@ -45,33 +45,36 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\Diego Veliz\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
+      "projectUniqueName": "C:\\Users\\Diego Veliz\\Desktop\\BetaLab03\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
       "projectName": "API-LAB-03-ED2-URL",
-      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\obj\\",
+      "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\BetaLab03\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\API-LAB-03-ED2-URL.csproj",
+      "packagesPath": "C:\\Users\\Diego Veliz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Diego Veliz\\Desktop\\BetaLab03\\LAB-03-ED2-URL\\LAB-03-ED2-URL\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Diego Veliz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "http://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\this is me trying\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
+            "C:\\Users\\Diego Veliz\\Desktop\\BetaLab03\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj": {
+              "projectPath": "C:\\Users\\Diego Veliz\\Desktop\\BetaLab03\\LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL\\ClassLibrary-LAB-03-ED2-URL.csproj"
             }
           }
         }
@@ -102,7 +105,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

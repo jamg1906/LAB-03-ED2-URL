@@ -64,7 +64,7 @@ namespace LAB_03_ED2_URL.Controllers
                 }
                 //aquí en vez de los "resultado.txt" iria el nombre original del archivo
                 string OriginalName = Compression.DecompressFile(filePath);
-                FileStream Sender = new FileStream(Directory.GetCurrentDirectory() + "\\Decompressed\\" + "resultado.txt", FileMode.OpenOrCreate);
+                FileStream Sender = new FileStream(Directory.GetCurrentDirectory() + "\\Decompressed\\" + OriginalName, FileMode.OpenOrCreate);
                 return File(Sender, "text/plain", OriginalName);
             }
             catch
