@@ -22,7 +22,7 @@ namespace LAB_03_ED2_URL.Models
             try
             {
                 List<Compression> All = new List<Compression>();
-                using (var reader = new StreamReader(Directory.GetCurrentDirectory() + "\\test.json"))
+                using (var reader = new StreamReader(Directory.GetCurrentDirectory() + "\\compressions.json"))
                 {
                     string registry;
                     registry = reader.ReadToEnd();
@@ -36,7 +36,7 @@ namespace LAB_03_ED2_URL.Models
 
         public static void WriteRegistry(string OriginalName, string CompressedFilePath, double CompressionRatio, double CompressionFactor, double ReductionPercentage)
         {
-            string path = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\test.json");
+            string path = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\compressions.json");
             if (!File.Exists(path))
             {
                 using (FileStream creator = File.Create(path)){ };
@@ -71,6 +71,31 @@ namespace LAB_03_ED2_URL.Models
                 }
             }
         }
+
+        public static void DecompressFile(string filePath, string filename)
+        {
+            ClassLibrary_LAB_03_ED2_URL.Huffman CompresorCrack = new ClassLibrary_LAB_03_ED2_URL.Huffman();
+            using FileStream file = new FileStream(filePath, FileMode.OpenOrCreate);
+            using BinaryReader Lector = new BinaryReader(file);
+            int Cant_Byte_Read = 10000;
+            int Aumentar_Max = 1;
+            byte[] Text = new byte[Cant_Byte_Read];
+            Text = Lector.ReadBytes(Cant_Byte_Read);
+            while (file.Position < file.Length)
+            {
+                byte[] Aux = Lector.ReadBytes(Cant_Byte_Read);
+                Array.Resize(ref Text, Text.Length + Aux.Length);
+                Aux.CopyTo(Text, Cant_Byte_Read * Aumentar_Max);
+                Aumentar_Max++;
+            }
+            Lector.Close();
+            byte[] Impresor = CompresorCrack.Descompresion(Text);
+            using FileStream StreFight = new FileStream(Directory.GetCurrentDirectory() + "\\Decompressed\\" + filename, FileMode.OpenOrCreate);
+            using BinaryWriter Escritor = new BinaryWriter(StreFight);
+            Escritor.Write(Impresor);
+            Escritor.Close();
+        }
+
 
         public static void CompressFile(string filePath, string filename, string name)
         {

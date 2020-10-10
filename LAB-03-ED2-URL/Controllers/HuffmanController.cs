@@ -23,7 +23,7 @@ namespace LAB_03_ED2_URL.Controllers
         {
             try
             {
-                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\NonCompressed\\" + file.FileName);
+                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\Temp\\" + file.FileName);
                 if (file != null)
                 {
                     using (var stream = new FileStream(filePath, FileMode.Create))
@@ -48,19 +48,13 @@ namespace LAB_03_ED2_URL.Controllers
         {
             try
             {
-                string ogName = "";
-                int x = file.FileName.Length - 1;
-                int howMany = 0;
-                while (file.FileName[x] != '.')
+                var Extension = file.FileName.Split('.');
+                //Esto valida si no es .huff
+                if (Extension[Extension.Length - 1] != "huff")
                 {
-                    howMany++;
-                    x--;
+                    return StatusCode(500);
                 }
-                for (int i = 0; i < file.FileName.Length-howMany-1; i++)
-                {
-                    ogName += file.FileName[i];
-                }
-                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + ogName + ".huff");
+                var filePath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\Temp\\" + file.FileName);
                 if (file != null)
                 {
                     using (var stream = new FileStream(filePath, FileMode.Create))
@@ -68,9 +62,10 @@ namespace LAB_03_ED2_URL.Controllers
                         await file.CopyToAsync(stream);
                     }
                 }
-                else { return StatusCode(500); }
-                //Aquí se debería mandar esa ruta o string al compresor, obtener la ruta del descomprimido y regresarlo aquí.
-                return Ok("OK");
+                //aquí en vez de los "resultado.txt" iria el nombre original del archivo
+                Compression.DecompressFile(filePath, "resultado.txt");
+                FileStream Sender = new FileStream(Directory.GetCurrentDirectory() + "\\Decompressed\\" + "resultado.txt", FileMode.OpenOrCreate);
+                return File(Sender, "text/plain", "resultado.txt");
             }
             catch
             {
