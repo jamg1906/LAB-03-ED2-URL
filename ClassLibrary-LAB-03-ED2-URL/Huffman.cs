@@ -18,20 +18,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
         private int Tam_Original;
         private int Tam_Compress;
         private bool Compres;
-        public string Resultado_Obtenido()
-        {
-            string Resul="";
-            int total = 0;
-            var Contenido=      Tabla.Values;
-            foreach (Registro Item in Contenido)
-            {
-                total += Item.Cant_Aparicion;
-                      Resul += String.Format("{0,5}|{1,5}|{2,20}|{3,30}|{4,35}|" + Environment.NewLine, Convert.ToChar(Item.simbolo), Item.simbolo, Item.Cant_Aparicion, Convert.ToString(Item.probabilidad), Item.prefijo);
-            }
-            return Resul+ Environment.NewLine+"Total original=" +total.ToString();
-        }
       
-        
         public byte[] Compresion(byte[] Data)
         {
             Compres = true;

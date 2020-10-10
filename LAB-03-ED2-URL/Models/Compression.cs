@@ -111,8 +111,8 @@ namespace LAB_03_ED2_URL.Models
                 count++;
                 FinalFileName = Directory.GetCurrentDirectory() + "\\Decompressed\\" + name + count + "." + ext;
             }
-            using FileStream StreFight = new FileStream(FinalFileName, FileMode.OpenOrCreate);
-            using BinaryWriter Escritor = new BinaryWriter(StreFight);
+            using FileStream archivo = new FileStream(FinalFileName, FileMode.OpenOrCreate);
+            using BinaryWriter Escritor = new BinaryWriter(archivo);
             Escritor.Write(Impresor);
             Escritor.Close();
             File.Delete(filePath);
@@ -153,8 +153,8 @@ namespace LAB_03_ED2_URL.Models
                 count++;
                 FinalFileName = Directory.GetCurrentDirectory() + "\\Compressed\\" + name + count + ".huff";
             }
-            using FileStream StreFight = new FileStream(FinalFileName, FileMode.OpenOrCreate);
-            using BinaryWriter Escritor = new BinaryWriter(StreFight);
+            using FileStream archivo = new FileStream(FinalFileName, FileMode.OpenOrCreate);
+            using BinaryWriter Escritor = new BinaryWriter(archivo);
             Escritor.Write(Result);
             Escritor.Close();
             double[] data = CompresorCrack.Datos_Compresion();
