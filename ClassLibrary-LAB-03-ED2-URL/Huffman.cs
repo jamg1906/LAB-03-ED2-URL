@@ -43,6 +43,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
             Crear_Arbol();
             Agregar_Prefijos(Cola.raiz.Valor);
             byte[] Result = Convert_Ascii(Binario_Convert(Data));
+            Tam_Compress = Result.Length;
             Array.Resize(ref Meta_Data, Meta_Data.Length + Result.Length);
             Result.CopyTo(Meta_Data, Tam_Data);
             return Meta_Data;
@@ -158,7 +159,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
                 Aux.probabilidad = One.probabilidad + Two.probabilidad;
                 Aux.Hijo_Der = One;
                 Aux.Hijo_Izq = Two;
-                Aux.IsNode = true;
+               //Aux.IsNode = true;
                 Cola.Agregar(Aux, Registro.Determinar_Prioridad);
             }
         }
@@ -188,9 +189,8 @@ namespace ClassLibrary_LAB_03_ED2_URL
                     }
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                //Falta añadir la excepción
             }
         }
 
@@ -350,11 +350,15 @@ namespace ClassLibrary_LAB_03_ED2_URL
             return Resultado;
         }
     
+        /// <summary>
+        /// Metodo que devuelve los valores de compresión
+        /// </summary>
+        /// <returns>[0] Razón compresión, [1] Factor Compresión, [2] Porcentaje Reduccion</returns>
         public double[] Datos_Compresion()
         {
-            double razon_compresion = Tam_Compress / Tam_Original;
-            double Factor_Compresion = Tam_Original / Tam_Compress;
-            double Porcentaje_Reduccion = 100 * ((Tam_Compress - Tam_Original) / Tam_Original); 
+            double razon_compresion = Convert.ToDouble(Tam_Compress) / Convert.ToDouble(Tam_Original);
+            double Factor_Compresion = Convert.ToDouble(Tam_Original) / Convert.ToDouble(Tam_Compress);
+            double Porcentaje_Reduccion = 100 * (Convert.ToDouble((Tam_Original- Tam_Compress)) / Convert.ToDouble(Tam_Original)); 
             return new double[3] {razon_compresion,Factor_Compresion,Porcentaje_Reduccion };
         }
     

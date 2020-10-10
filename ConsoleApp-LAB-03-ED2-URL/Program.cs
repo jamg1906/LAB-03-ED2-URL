@@ -48,7 +48,7 @@ namespace ConsoleApp_LAB_03_ED2_URL
             //    paso = Console.ReadLine();
             //}
 
-            using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\MundoCiego.txt", FileMode.OpenOrCreate);
+            using FileStream file = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\cuento.txt", FileMode.OpenOrCreate);
             using BinaryReader Lector = new BinaryReader(file);
             int Cant_Byte_Read = 10000;
             int Aumentar_Max = 1;
@@ -64,12 +64,12 @@ namespace ConsoleApp_LAB_03_ED2_URL
             Lector.Close();
             byte[] Impresor = CompresorCrack.Compresion(Text);
 
-            using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\PruebaFinalWorld.txt", FileMode.OpenOrCreate);
+            using FileStream StreFight = new FileStream("C:\\Users\\Diego Veliz\\Desktop\\PruebaFinalcuento.txt", FileMode.OpenOrCreate);
             using BinaryWriter Escritor = new BinaryWriter(StreFight);
             Escritor.Write(Impresor);
             Escritor.Close();
 
-            //Console.WriteLine(CompresorCrack.Resultado_Obtenido());
+            Console.WriteLine(CompresorCrack.Resultado_Obtenido());
 
 
 

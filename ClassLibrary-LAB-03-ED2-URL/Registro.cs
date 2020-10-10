@@ -13,7 +13,6 @@ namespace ClassLibrary_LAB_03_ED2_URL
         public string prefijo;
         public Registro Hijo_Izq;
         public Registro Hijo_Der;
-        public bool IsNode;
 
         public static Comparison<Registro> Comparar_Prioridad = delegate (Registro Simb1, Registro Simb2)
         {
@@ -33,7 +32,7 @@ namespace ClassLibrary_LAB_03_ED2_URL
 
         public void Asig_Prefijo(string Prefijo_Binario)
         {
-            if (!IsNode)
+            if (simbolo != 0)
             {
                 prefijo = Prefijo_Binario;
             }
