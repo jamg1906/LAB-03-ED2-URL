@@ -101,7 +101,17 @@ namespace LAB_03_ED2_URL.Models
             Array.Copy(TextoComprimido, (cant_CName + 1), Data_retorna, 0, Data_retorna.Length);
 
             byte[] Impresor = CompresorCrack.Descompresion(Data_retorna);
-            using FileStream StreFight = new FileStream(Directory.GetCurrentDirectory() + "\\Decompressed\\" + Name_Original, FileMode.OpenOrCreate);
+            string FinalFileName = Directory.GetCurrentDirectory() + "\\Decompressed\\" + Name_Original;
+            var extension = FinalFileName.Split('.');
+            string ext = extension[extension.Length - 1];
+            string name = Name_Original.Substring(0, Name_Original.Length - 4);
+            int count = 0;
+            while (File.Exists(FinalFileName))
+            {
+                count++;
+                FinalFileName = Directory.GetCurrentDirectory() + "\\Decompressed\\" + name + count + "." + ext;
+            }
+            using FileStream StreFight = new FileStream(FinalFileName, FileMode.OpenOrCreate);
             using BinaryWriter Escritor = new BinaryWriter(StreFight);
             Escritor.Write(Impresor);
             Escritor.Close();
